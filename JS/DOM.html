@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <script>
+            /*
+            1 获得document dom树
+              window.document
+            2 从document中获取要操作的元素
+            3 对元素的操作
+                操作元素的属性
+                操作元素的样式
+                操作元素的文本
+                增删元素
+            */
+
+            function fun1() {
+                // 获得document dom树
+                var doc = window.document;
+            }
+            function fun2() {
+                // 从document中获取要操作的元素
+                var div = document.getElementById("username");
+                console.log(div);
+            }
+            function fun3() {
+                var els = document.getElementsByTagName("input");
+                for (const e of els) {
+                    console.log(e);
+                }
+            }
+            function fun4() {
+                var els = document.getElementsByName("aaa");
+                for (const e of els) {
+                    console.log(e);
+                }
+            }
+            function fun5() {
+                var els = document.getElementsByClassName("a");
+                for (const e of els) {
+                    console.log(e);
+                }
+            }
+
+            function fun6() {
+                var div01 = document.getElementById("div01");
+                var child = div01.children;
+                for (const e of child) {
+                    console.log(e);
+                }
+                console.log(div01.firstElementChild);
+                console.log(div01.lastElementChild);
+            }
+            function fun7() {
+                var pwd = document.getElementById("password");
+                console.log(pwd.parentElement);
+            }
+            function fun8() {
+                var pwd = document.getElementById("password");
+                console.log(pwd.previousElementSibling);
+                console.log(pwd.nextElementSibling);
+            }
+            
+            function funA() {
+                var in1 = document.getElementById("in1");
+                console.log(in1.type);
+                console.log(in1.value);
+
+                in1.type = "button";
+                in1.value = "world";
+                
+                console.log(in1.type);
+                console.log(in1.value);
+            }
+            function funB() {
+                var in1 = document.getElementById("in1");
+                in1.style.color = "green";
+                in1.style.fontSize = "30px";
+            }
+            function funC() {
+                var div = document.getElementById("div02");
+                console.log(div.innerText);
+                div.innerText = "Hello";    //识别文本
+                div.innerHTML = "<h1>World2</h1>"; //识别html
+            }
+
+            function funD() {
+                var csli = document.createElement("li"); //<li></li>
+                csli.id = "cs"
+                csli.innerText = "长沙";
+                var cityul = document.getElementById("city");
+                cityul.appendChild(csli); //添加元素
+
+            }
+            function funE() {
+                var csli = document.createElement("li"); 
+                csli.id = "xa"
+                csli.innerText = "西安";
+                var cityul = document.getElementById("city");
+                var sz = document.getElementById("sz");
+                cityul.insertBefore(csli, sz);
+
+            }
+            function funF() {
+                var csli = document.createElement("li");
+                csli.id = "sy"
+                csli.innerText = "三亚";
+                var cityul = document.getElementById("city");
+                var bj = document.getElementById("bj");
+                cityul.replaceChild(csli, bj); //添加元素
+
+            }
+            function funG() {
+                var csli = document.getElementById("sh"); 
+                csli.remove();
+            }
+            function funH() {
+                var csli = document.getElementById("city"); 
+                // var child = csli.firstChild;
+                // while (child) {
+                //     csli.removeChild(child);
+                //     child = csli.firstChild;
+                // }
+                csli.innerHTML = ""; //清空元素
+            }
+
+        </script>
+        <style>
+            #in1{
+                width: 100px;
+                height:50px;
+                background-color:argb(29, 36, 136);
+                color:black;
+                font-size: 22px;
+                font-family: 'Courier New', Courier, monospace;
+                border: 2px solid rebeccapurple;
+                border-radius: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div01">
+            <input type="text" class="a" id="username" name="aaa">
+            <input type="text" class="a" id="password" name="aaa">
+            <input type="text" class="b" id="email">
+            <input type="text" id="address">
+                
+        </div>
+        <input type="text" /><br>
+        <hr>
+
+        <input type="button" value="根据id获取元素" onclick="fun2()" id="btn01">
+        <input type="button" value="根据标签名获取多个元素" onclick="fun3()" id="btn02">
+        <input type="button" value="根据name属性值获取多个元素" onclick="fun4()" id="btn03">
+        <input type="button" value="根据class属性值获取多个元素" onclick="fun5()" id="btn04">
+        <hr>
+
+        <input type="button" value="根据父元素获取子元素" onclick="fun6()" id="btn05">
+        <input type="button" value="根据子元素获取父元素" onclick="fun7()" id="btn06">
+        <input type="button" value="根据当前元素获取兄弟元素" onclick="fun8()" id="btn07">
+        <input type="button" value="根据class属性值获取多个元素" onclick="fun9()" id="btn08">
+        <hr>
+
+        <input id="in1" type="text" value="hello">
+        <div id="div02">
+            less more
+        </div>
+        <hr>
+        <button onclick="funA()" value="asd">改变元素值</button>
+        <button onclick="funB()" value="asd">操作样式</button>
+        <button onclick="funC()" value="asd">操作文本</button>
+
+        <hr>
+        <ul id="city">
+            <li id="hz">杭州</li>
+            <li id="bj">北京</li>
+            <li id="sh">上海</li>
+            <li id="sz">深圳</li>
+        </ul>
+        <button onclick="funD()">增加长沙</button>
+        <button onclick="funE()">深圳前增加西安</button>
+        <button onclick="funF()">将北京替换为三亚</button>
+        <button onclick="funG()">删除上海</button>
+        <button onclick="funH()">清空城市列表</button>
+
+    </body>
+</html>

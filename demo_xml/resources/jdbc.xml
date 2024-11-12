@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+1 跟标签只有一个
+2 第一行永远只是  <?xml version="1.0" encoding="UTF-8" ?>
+-->
+
+<jdbc>
+    <dev id="dev_test">
+        <username>root</username>
+        <password>123456</password>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:13306/atguigu</url>
+    </dev>
+</jdbc>

@@ -1,0 +1,350 @@
+
+<!DOCTYPE html> <!--声明html文档-->
+<html>
+    <head>
+        <title>标题</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style>
+            .btn1{
+                width: 100px;
+                height:50px;
+                background-color:argb(29, 36, 136);
+                color:black;
+                font-size: 15px;
+                font-family: 'Courier New', Courier, monospace;
+                border: 2px solid rebeccapurple;
+                border-radius: 2px;    
+            }
+        </style>
+
+        <!-- 
+        内嵌型：script标签引入
+        引入外部脚本文件：引入外部js文件 + script标签引入
+        -->
+
+        <!-- <script>
+            function suprise() {
+                // 弹窗
+                alert("你好");
+            }
+        </script> -->
+
+        <!-- <script src="button.js"></script> -->
+
+        <!-- 
+        js数据类型
+        数值 number
+        字符串 string
+        布尔 boolean
+        引用 Object
+        function类型 function
+        命名未赋值 ???
+        赋予null ???
+        判断数据类型 typeof
+         -->
+
+        <!-- <script>
+            var i = 10
+            console.log(i)
+            console.log(typeof(i))
+
+            var s = "hello"
+            console.log(s)
+            console.log(typeof(s))
+
+            var b = true
+            console.log(b)
+            console.log(typeof(b))
+
+            var o = {
+                name: "pipe",
+                age: 18
+            }
+            console.log(o)
+            console.log(typeof(o))
+
+            var f = function() {
+                console.log("hello")
+            }
+            console.log(f)
+            console.log(typeof(f))
+
+            var n = null
+            console.log(n)
+            console.log(typeof(n))
+
+            var u
+            console.log(u)
+            console.log(typeof(u))
+
+            var a = [1, 2, 3]
+            console.log(a)
+            console.log(typeof(a))
+
+            var d = new Date()
+            console.log(d)
+            console.log(typeof(d))
+        </script> -->
+
+        <!-- <script>
+            console.log(10/2)
+            console.log(10/0)  //Infinity
+            console.log(10%0)  //NaN
+            var i = 10
+            console.log(i /= 0)
+
+            console.log(1 == 1)
+            console.log(1 == '1') //类型转换 true
+            console.log(1 == true)
+
+            console.log(1 === '1')  //类型不一致false
+        </script> -->
+
+        <!-- <script>
+            //var mon = prompt('Please enter month') // 输入
+            var mon = '12'
+            var mon = Number.parseInt(mon) //转换
+        
+            if (mon == 12) {
+                console.log("12月")
+            } else {
+                console.log("不是12月")
+            }
+
+            switch (mon) {
+                case 12:
+                    console.log("12月嘞")
+                    break;
+                default:
+                    console.log("月份有误")   
+                    break;
+            }
+            
+            var i = 1
+            while (i <= 9) {
+                var j = 1
+                while(j <= i){
+                    document.write(j + "*" + i + "=" + (j*i) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+                    j++
+                }
+                document.write("<hr/>")
+                i++
+            }
+
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            for (var i = 0; i < arr.length; i++) {
+                document.write(arr[i] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+            }
+            document.write("<hr/>")
+
+            for (const key in arr) {
+                if (Object.hasOwnProperty.call(arr, key)) {
+                    document.write(arr[key] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+                }
+            }
+            document.write("<hr/>")
+
+        </script> -->
+
+        <!-- <script>
+            function sum(a, b) {
+                return a + b
+            }
+            console.log(sum(10, 20))
+
+            // 对象
+            var person = new Object()
+            person.name = "pipe"
+            person.age = 18
+            person.say = function(food) {
+                console.log(this.name + "今年" + person.age + "岁，正在吃" + food)
+            }
+            person.say("海底捞")
+
+            var person = {
+                name: "pipe",
+                age: 18,
+                say: function(food) {
+                    console.log(this.name + "今年" + person.age + "岁，正在吃" + food)
+                }
+            }
+            person.say("海底捞")
+
+        </script> -->
+
+
+        <!-- <script>
+            var person = '{"name":"pipe","age":10, "pets":[{"name":"xiaohua"}, {"name":"xiaohei"}], "words":["US", "ZH"], "species":{"name":"xiaoli","age":10}}';
+            console.log(person)
+            console.log(typeof(person))
+
+            var perJson = JSON.parse(person)
+            console.log(perJson)
+            console.log(typeof(perJson))
+            console.log(perJson.species.name)
+            console.log(perJson.pets[1].name)
+
+            var perJsonStr = JSON.stringify(perJson)
+            console.log(perJsonStr)
+            console.log(typeof(perJsonStr))
+
+        </script> -->
+
+        <!-- 
+         -->
+
+         <!-- <script>
+            var arr = new Array("lisi", 11, false)
+            var arr2 = ["1", "2", "3", "4", "5"]
+            arr[10] = '10'
+            console.log(arr)
+            console.log(arr.length)
+            console.log(arr2.concat(arr))
+
+            arr2.pop()
+            arr2.push('6')
+            console.log(arr2)
+            console.log(arr2.indexOf('6'))
+
+            arr2.reverse()
+            console.log(arr2)
+            console.log(arr2.join("-"))  //转换字符串
+            console.log(arr2.slice(2,4))  //切割，左闭右开
+
+            var date = new Date()
+            console.log(date)
+            console.log(date.getFullYear())
+            console.log(date.getMonth())
+            console.log(date.getDate())
+            console.log(date.getHours())
+            console.log(date.getMinutes())
+            console.log(date.getSeconds())
+            console.log(date.getMilliseconds())
+            console.log(date.getTime())
+            console.log(date.toLocaleDateString())
+         </script> -->
+
+
+         <!-- 
+         事件 
+            通过元素的属性绑定 on***
+            通过DOM编程绑定
+        
+        常见事件
+            鼠标事件 onclick ondbclick
+            键盘事件 onkeydown onkeyup
+            表单事件 onfocus onblur onchange onsubmit onreset
+            页面家住在事件 onload
+        
+        事件的触发
+            行为触发
+            DOM编程触发
+         -->
+
+         <!-- <script>
+
+            function fun1() {
+                console.log("fun1点击了按钮")
+            }
+            function fun2() {
+                console.log("fun2也点击了按钮")
+            }
+            function fun3() {
+                console.log("fun3双击了")
+            }
+
+            function fun4() {
+                console.log("fun4键盘按下了")
+            }
+            function fun5() {
+                console.log("fun5键盘抬起了")
+            }
+
+            function fun6() {
+                console.log("fun6获得焦点了")
+            }
+            function fun7() {
+                console.log("fun7失去焦点了")
+            }
+            function fun8(value) {
+                console.log("fun8内容改变了" + value)
+            }
+            function fun9() {
+                //alert("fun9表单提交了")
+                var flag = confirm("确定要提交表单吗")
+                if (flag) {
+                    return true
+                } else {
+                    //event.preventDefault(); //阻止组件默认行为
+                    return false
+                }
+                
+            }
+            function fun10(value) {
+                alert("fun10重置了")
+            }
+            
+         </script> -->
+         <script>
+            // dom编程
+            window.onload = function ready() {
+                var divEle = document.getElementById("d1")
+                divEle.onclick = function(){
+                    divEle.style.backgroundColor = "red"
+                }
+
+                var btn = document.getElementById("btn1")
+                btn.onclick = function(){
+                    alert("按钮单击了")
+                    divEle.onclick()
+                }
+
+                
+            }
+        </script>
+
+        <style>
+            .div1{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <div id="d1" class="div1"></div>
+        <br/>
+        <button id ="btn1">按钮</button>
+        
+
+
+
+
+
+
+        <!-- <input type="button" value="按钮" onclick="fun1(),fun2()" ondblclick="fun3()"></input>
+        <br/>
+        <input type="text" onkeydown="fun4()" onkeyup="fun5()"></input>
+        <br/>
+
+        <form method="get" action="../HTML/helloworld.html" 
+        onsubmit="return fun9()"
+        onreset="fun10()">
+            用户名：
+            <input type="text" name="username"
+            onfocus="fun6()" 
+            onblur="fun7()" 
+            onchange="fun8(this.value)"/> 
+
+            <br/>
+            账号：<input type="text" name="loginanme" />  <br/>
+            <input type="submit" value="登录" />  <br/>
+            <input type="reset" value="清空" />  <br/>
+        </form> -->
+
+
+    </body>
+</html>

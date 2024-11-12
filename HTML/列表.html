@@ -1,0 +1,155 @@
+
+<!DOCTYPE html> <!--声明html文档-->
+<html>
+    <head>
+        <title>标题</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <!-- 
+        有序列表 ol
+        无序列表 ul
+        列表项 li 
+        -->
+        <ol>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ol>
+
+        <ul>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ul>
+
+        <a href="www.baidu.com">百度</a>
+
+
+        <br/>
+        <!-- src路径 title鼠标悬停文字 alt图片加载失败文字 -->
+        <img src="1.png" alt="logo" width="100" title="photo" />
+
+
+        <!-- thead表头 tbody表体 tfoot表尾  
+             tr表中一行 td行中单元格 th加粗的td -->
+        <h3 style="text-align: center;">员工技能竞赛评分表</h3>
+        <table border="1px" style="margin: 0px auto; width: 300px;">
+            <thead>
+                <tr>
+                    <th>排名</th>
+                    <th>姓名</th>
+                    <th>分数</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>jack</td>
+                    <td>100</td>
+                    <!-- 行合并 -->
+                    <td rowspan="6">100</td> 
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>xiaoli</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>lisan</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>总人数</td>
+                    <!-- 列合并 -->
+                    <td colspan="2">200</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- 
+        action 数据提交地址
+        method 数据提交方式 
+            GET 参数会以键值对形式在url后提交url?key=value&key=value
+                数据直接暴露在地址栏上，相对不安全
+                地址栏长度有限制
+                地址栏上，只能是字符不能提交文件
+                相比于GET效率更高
+
+            POST 参数不放在url
+                 数据不会暴露在地址栏，相对安全
+                 数据是单独打包通过请求体发送，提交数据量较大
+                 请求体中，可以是字符，也可以字节数据，可以提交文件
+        
+            input name 属性明确提交的参数
+                  value 明确实参值
+                  type 表单项类型 
+                  readonly 只读
+                  disabled 不可用，提交不携带
+
+
+                  text 文本框 
+                  password 密码框
+                  submit 提交
+                  reset 重置
+                  radio 单选框，相同name存在互斥效果
+                  checkbox 多选框
+                  hidden 隐藏
+                  textarea 文本域
+                  select 下拉框
+
+
+
+
+        -->
+
+        <form method="get" action="helloworld.html">
+            用户名：<input type="text" name="username" /> <br/>
+            密码：<input type="password" name="password" />  <br/>
+            性别：<input type="radio" name="gender" value="1" checked> 男
+                  <input type="radio" name="gender" value="0"> 女
+                  <br/>
+            爱好：
+                 <input type="checkbox" name="hobby" value="1" checked> 篮球
+                 <input type="checkbox" name="hobby" value="2" > 足球
+                 <input type="checkbox" name="hobby" value="3" > 网球
+                 <input type="checkbox" name="hobby" value="4" checked> 羽毛球
+                  <br/>
+            个人简介：
+                <br/>
+                <textarea name="intro" style="width: 300px; height: 100px;"></textarea>
+                <br/>
+            籍贯：
+                <select name="city">
+                    <option value="1">杭州</option>
+                    <option value="2">北京</option>
+                    <option value="3">上海</option>
+                    <option value="0" selected>-请选择-</option>
+                </select>
+                <br/>
+            
+            <input type="submit" value="登录" />  <br/>
+            <input type="submit" value="登录" />  <br/>
+            <input type="reset" value="清空" />  <br/>
+        </form>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <form method="post" action="helloworld.html">
+            用户名：<input type="text" name="username" /> <br/>
+            密码：<input type="password" name="password" />  <br/>
+            <input type="submit" value="登录" />  <br/>
+            <input type="reset" value="清空" />  <br/>
+        </form>
+
+        <br/>
+        <br/>
+        <br/>
+
+        &lt;&amp;&gt;
+
+    </body>
+</html>

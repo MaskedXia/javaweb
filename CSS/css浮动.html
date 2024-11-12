@@ -1,0 +1,88 @@
+
+<!DOCTYPE html> <!--声明html文档-->
+<html>
+    <head>
+        <title>标题</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style>
+            .outDiv {
+                width: 500px;
+                height: 300px;
+                border: 1px solid hotpink;
+                background-color: beige;
+                margin: 0px auto;
+            }
+
+            .innerDiv {
+                width: 100px;
+                height: 100px;
+                border: 1px solid blue;
+                background-color: beige;
+                float: left
+            }
+
+            div {
+                width: 100px;
+                height: 100px;
+                border: 1px solid hotpink;
+                background-color: beige;
+            }
+            /* 浮动
+            float: 
+                left 
+            */
+
+            /* 定位
+            position 
+                static 默认
+                absolute 绝对
+                relative 相对 相对于原本的位置
+                fixed 固定 相对浏览器窗口
+            left
+            right
+            top
+            bottom
+            */
+
+            /* 盒子模型
+            margin 外边框
+            padding 内边框
+            （不占据盒子空间）
+
+            */
+
+            .d1 {
+                background-color: green;
+                /* float: right; 浮动 */
+
+                /* position: fixed;
+                left: 100px;
+                top: 100px; */
+
+                margin-right: 10px;
+                padding-top: 11px;
+
+            }
+
+            .d2 {
+                background-color: palegreen;
+            }
+
+            .d3 {
+                background-color: rebeccapurple;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="outDiv">
+            <div class="innerDiv d1">diva</div>
+            <div class="innerDiv d2">divb</div>
+            <div class="innerDiv d3">divc</div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </body>
+</html>

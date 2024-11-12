@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <script>
+            /*
+            window(window可以省略不写)
+                三种弹窗方式
+                    alert
+                    prompt
+                    confirm 
+
+            history 窗口访问历史
+
+            */
+
+            function fun1() {
+                window.alert("hello world");
+            }
+            function fun2() {
+                var res = window.prompt("please input your name");
+                console.log(res); 
+            }
+            function fun3() {
+                var res = window.confirm("please confirm your name");
+                console.log(res);
+            }
+            function fun4() {
+                window.setTimeout(function(){ 
+                    alert("5s 后关闭窗口");
+                    window.close();
+                }, 5000);
+            }
+
+            function funA() {
+                history.back();
+            }
+            function funB() {
+                history.forward();
+                history.go(1); //向前翻几页
+            }
+            function funC() {
+                location.href = "http://www.baidu.com"; //修改地址栏的url
+            }
+            function funD() {
+                sessionStorage.setItem("username", "pipe");
+                localStorage.setItem("age", "18");
+            }
+            function funE() {
+                console.log(sessionStorage.getItem("username"));
+                console.log(localStorage.getItem("age"));
+            }
+            function funF() {
+                sessionStorage.clear();
+                localStorage.clear();
+            }
+
+        </script>
+    </head>
+    <body>
+        <button onclick="funA()">上一页</button>
+        <button onclick="funB()">下一页</button>
+        <button onclick="funC()">百度</button>
+        <button onclick="funD()">存储数据</button>
+        <button onclick="funE()">读取数据</button>
+        <button onclick="funF()">清空数据</button>
+
+        <a href="http://www.baidu.com">百度</a>
+
+        <hr>
+        <button onclick="fun1()">信息提示框</button>
+        <button onclick="fun2()">信息输入框</button>
+        <button onclick="fun3()">信息确认框</button>
+        <button onclick="fun4()">定时任务</button>
+
+    </body>
+</html>

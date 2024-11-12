@@ -1,0 +1,10 @@
+input{
+    width: 100px;
+    height:50px;
+    background-color:argb(29, 36, 136);
+    color:black!important;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid rebeccapurple;
+    border-radius: 2px;
+}

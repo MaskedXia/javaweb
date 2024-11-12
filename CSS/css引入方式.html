@@ -1,0 +1,45 @@
+
+<!DOCTYPE html> <!--声明html文档-->
+<html>
+    <head>
+        <title>标题</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <!-- 内嵌式 -->
+        <style>
+            input{
+                width: 100px;
+                height:50px;
+                background-color:argb(29, 36, 136);
+                color:black!important;
+                font-size: 22px;
+                font-family: 'Courier New', Courier, monospace;
+                border: 2px solid rebeccapurple;
+                border-radius: 2px;
+            }
+        </style>
+        <!-- 外部样式表 -->
+        <link href="btn.css" rel="stylesheet">
+    </head>
+
+    <!-- 引入方式
+     行内式：style属性引入
+     内嵌式：head的style定义，选择器 
+     外部样式表：将css单独放入css文件
+     -->
+    <body>
+        <input type="button" value="按钮"
+        style="
+        width: 100px;
+        height:50px;
+        background-color:argb(29, 36, 136);
+        color:black !important;
+        font-size: 22px;
+        font-family: '隶书';
+        border: 2px solid rebeccapurple;
+        border-radius: 2px;
+        ">
+
+        <input type="button" value="按钮">
+
+    </body>
+</html>

@@ -1,0 +1,16 @@
+处理客户端请求并作出响应
+动态
+
+请求报文 -> HttpServletRequest对象
+根据请求路径找到对应的servlet，将servlet实例化，调用service方法
+HttpServletResponse对象 -> 响应报文
+
+
+乱码问题
+ASCII 一般都支持
+数据的编码和解码不是相同字符集 （例如UTF-8编码，GBK解码）
+GET乱码 请求行
+POST乱码 请求体
+响应乱码  resp.setContentType("text/html;charset=utf-8") 解码
+
+

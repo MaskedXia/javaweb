@@ -1,0 +1,28 @@
+JRE 靶场
+Tomcat 枪
+app 子弹
+
+先进、性能稳定、免费
+
+jetty 更轻量级
+
+
+webapps
+    部署app:
+        static
+            js
+            img
+            css
+        page
+            .html
+        WEB-INF 受保护的文件
+            classes
+            lib 依赖
+            web.xml 项目配置文件
+
+web项目部署的方式
+    方式一：直接将编译好的项目放在webapps目录下
+    方式二：将编译好的项目打成war包放在webapps目录下，tomcat启动会自动解压war包 [更多]
+    方式三：将项目放在非webapps的其他目录下，在tomcat中配置文件指向app实际路径
+    <Context path="app" docBase="C:\Users\pipe\Desktop\jave_web\javaweb\demo_xml">
+
